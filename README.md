@@ -18,14 +18,14 @@ Model flow:
 * Extract Daily Mail Summarization data
 * Split data across Vendor and Buyers by topic
 * Develop two extractive summarization tools
-..* Baseline Model trained using only Vendor Data
-..* Federated Learning Model trained with complete set of data (without sharing data)
+  * Baseline Model trained using only Vendor Data
+  * Federated Learning Model trained with complete set of data (without sharing data)
 * Compare Results
 
 1. Topic Model (/Programs/TopicModelling)
-..* Creates a topic model using the 20newsgroup dataset
-..* Splits Daily Mail data according to topic 
-..* Each party receives a subset of the topics (no party overlaps topics)
+  * Creates a topic model using the 20newsgroup dataset
+  * Splits Daily Mail data according to topic 
+  * Each party receives a subset of the topics (no party overlaps topics)
 
 2. SummaRunner (/programs/SummaRunner)
 ..* Prep data for input (inputs whole document split by sentences)
@@ -36,6 +36,7 @@ Model flow:
 ....* Federated Learning Model
 
 SummaRuNNer architecture
+
 
 3. Evaluation (/programs/Evaluation)
 ..* Evaluator class
