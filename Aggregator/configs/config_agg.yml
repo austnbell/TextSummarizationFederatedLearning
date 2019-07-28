@@ -1,0 +1,31 @@
+connection:
+  info:
+    ip: 127.0.0.1
+    port: 5000
+  name: FlaskConnection
+  path: ffl_framework.connection.flask_connection
+  synch: false
+data:
+  info:
+    X_test_file: ./Vendor/Enc_Test_Vendor_docs.npy
+    X_train_file: ./Vendor/Enc_Train_Vendor_docs.npy
+    y_test_file: ./Vendor/Enc_Test_Vendor_labels.npy
+    y_train_file: ./Vendor/Enc_Train_Vendor_labels.npy
+  name: SumaDataHandler
+  path: Programs.SumaRuNNer.DataHandler
+fusion:
+  name: SGDFusionHandlerHandler
+  path: ffl_framework.aggregator.fusion.fusion_handler
+hyperparams:
+  global:
+    epochs: 5
+    termination_accuracy: 0.98
+  local:
+    optimizer:
+      lr: 0.001
+    training:
+      batch_size: 32
+      epochs: 2
+protocol_handler:
+  name: ProtoHandler
+  path: ffl_framework.aggregator.protohandler.proto_handler

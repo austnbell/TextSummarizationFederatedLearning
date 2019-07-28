@@ -1,0 +1,25 @@
+aggregator:
+  ip: 127.0.0.1
+  port: 5000
+connection:
+  info:
+    ip: 127.0.0.1
+    port: 8085
+  name: FlaskConnection
+  path: ffl_framework.connection.flask_connection
+  synch: false
+data:
+  info:
+    X_test_file: ./Vendor/Enc_Test_Vendor_docs.npy
+    X_train_file: ./Vendor/Enc_Train_Vendor_docs.npy
+    y_test_file: ./Vendor/Enc_Test_Vendor_labels.npy
+    y_train_file: ./Vendor/Enc_Train_Vendor_labels.npy
+  name: SumaDataHandler
+  path: Programs.SumaRuNNer.DataHandler
+model:
+  name: KerasFFLModel
+  path: ffl_framework.model.keras_ffl_model
+  spec: Vendor/configs/model_spec.pickle
+protocol_handler:
+  name: ProtocolHandlerPlainFL
+  path: ffl_framework.party.protocol_handler_plain_fl
