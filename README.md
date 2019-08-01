@@ -28,24 +28,25 @@ Model flow:
   * Each party receives a subset of the topics (no party overlaps topics)
 
 2. SummaRunner (/programs/SummaRunner)
-..* Prep data for input (inputs whole document split by sentences)
-....* Convert data to embedding idx 
-....* Create Vocab Object 
-..* SummaRunner Model
-....* Baseline model
-....* Federated Learning Model
+ * Prep data for input (inputs whole document split by sentences)
+  * Convert data to embedding idx 
+  * Create Vocab Object 
+ * SummaRunner Model
+  * Baseline model
+  * Federated Learning Model
 
 SummaRuNNer architecture
+![alt text](https://github.com/austnbell/TextSummarizationFederatedLearning/blob/master/Papers/SummaRuNNer_Architecture.png)
 
 
 3. Evaluation (/programs/Evaluation)
-..* Evaluator class
-....* Convert idx to text
-....* Extract gold and predicted summaries
-....* Compute Rouge Scores
-..* Compare Model Results
+ * Evaluator class
+  * Convert idx to text
+  * Extract gold and predicted summaries
+  * Compute Rouge Scores
+ * Compare Model Results
 
 
 
-
+### Results
 
