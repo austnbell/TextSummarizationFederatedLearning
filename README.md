@@ -47,4 +47,4 @@ Metrics:
 
 Example of Extractive Summary:
 ![alt_text](https://github.com/austnbell/TextSummarizationFederatedLearning/blob/master/Papers/Summary_example.png)
-Red highlights sentences that appear in one summary, but not another
+Red highlights sentences that appear in one summary, but not the other.
