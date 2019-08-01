@@ -23,30 +23,7 @@ from keras.models import Model
 from keras.activations import sigmoid, tanh
 from keras.initializers import Constant
 
-# parse command line for model arguments
-parser = argparse.ArgumentParser(description='extractive summary')
 
-parser.add_argument("-cmd", type = str, default = "TRAIN")
-
-# model inputs
-parser.add_argument("-doc_len", type = int, default = 50)
-parser.add_argument("-sent_len", type = int, default = 30)
-parser.add_argument("-lr", type = float, default = .001)
-parser.add_argument("-bs", type = int, default = 32)
-parser.add_argument("-epochs", type = int, default = 10)
-
-# model dimensions
-parser.add_argument("-pos_embed_dim", type = int, default = 50)
-parser.add_argument("-hidden_sz", type = int, default = 250)
-
-args = parser.parse_args()
-
-# non-alterable parameters 
-vocab = Vocab(word_index_path = "./Models/Word_Index.txt",
-                  embed_path= "./Models/Embeddings")
-vocab_sz = len(vocab.word_index)
-word_embed_dim = 300
-rel_segments = 10 # do not change
         
 
 ##############################
@@ -148,6 +125,31 @@ def SummaRuNNer():
     return model
 
 if __name__ == "__main__":
+    
+    # parse command line for model arguments
+    parser = argparse.ArgumentParser(description='extractive summary')
+
+    parser.add_argument("-cmd", type = str, default = "TRAIN")
+
+    # model inputs
+    parser.add_argument("-doc_len", type = int, default = 50)
+    parser.add_argument("-sent_len", type = int, default = 30)
+    parser.add_argument("-lr", type = float, default = .001)
+    parser.add_argument("-bs", type = int, default = 32)
+    parser.add_argument("-epochs", type = int, default = 10)
+
+    # model dimensions
+    parser.add_argument("-pos_embed_dim", type = int, default = 50)
+    parser.add_argument("-hidden_sz", type = int, default = 250)
+
+    args = parser.parse_args()
+
+    # non-alterable parameters 
+    vocab = Vocab(word_index_path = "./Models/Word_Index.txt",
+                      embed_path= "./Models/Embeddings")
+    vocab_sz = len(vocab.word_index)
+    word_embed_dim = 300
+    rel_segments = 10 # do not change
     
     from keras import backend as K 
     K.clear_session() 
