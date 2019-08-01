@@ -1,7 +1,11 @@
 # TextSummarizationFederatedLearning
-Text Summarization Tool developed with Federated Learning
+Text Summarization Tool developed with Federated Learning. For full information, read the complete blog post found here:
 
-For full information, read the complete blog post found here:
+Other project on my work in Federated Learning:
+* Introduction to Federated Learning:
+* Federated Learning in Healthcare (Hospital Readmissions)
+  * Blog
+  * [Code](https://github.com/austnbell/FederatedLearningHealthcare/blob/master/README.md)
 
 ### Summary:
 Develop text summarization tool where distributed data is incorporated through federated learning. Federated Learning allows training on distributed datasets and guarantees data privacy through sharing model parameters rather than data throughout training process. 
